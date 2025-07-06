@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensageiros de Maria - Grupo de Jovens</title>
+    <meta name="description" content="Site oficial do grupo de jovens católicos Mensageiros de Maria">
+    <meta name="keywords" content="jovens católicos, grupo de jovens, mensageiros de maria, igreja católica">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-amber-50 to-orange-50">
+    <!-- Header Fixo -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-amber-100">
+        <div class="max-w-md mx-auto px-4 py-3">
+            <div class="flex justify-between items-center text-sm">
+                <button onclick="scrollToSection('home')" class="text-amber-700 font-medium">Início</button>
+                <button onclick="scrollToSection('sobre')" class="text-amber-700 font-medium">Sobre</button>
+                <button onclick="scrollToSection('atividades')" class="text-amber-700 font-medium">Atividades</button>
+                <button onclick="scrollToSection('contato')" class="text-amber-700 font-medium">Contato</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-md mx-auto bg-white min-h-screen">
+        <!-- Seção Home -->
+        <section id="home" class="pt-20 pb-8">
+            <!-- Header com Logo -->
+            <header class="pt-8 pb-6 px-4 text-center">
+               
+                <h1 class="text-2xl font-bold text-amber-800 mb-2">Mensageiros de Maria</h1>
+                <p class="text-amber-700 text-sm">Grupo de Jovens</p>
+            </header>
+
+            <!-- Banner Principal com Imagem -->
+            <div class="px-4 mb-8">
+                <div class="relative  rounded-2xl overflow-hidden shadow-lg banner-principal">
+                    <!-- Aqui você pode adicionar sua imagem editada -->
+                     <img src="./public/banner.png" alt="Banner" 
+                         class="w-30 h-30 ro shadow-lg">
+                    <div class="absolute inset-0 "></div>
+                    
+                </div>
+            </div>
+
+            <!-- Menu de Navegação Rápida -->
+            <div class="px-4 space-y-4">
+                <button onclick="scrollToSection('eventos')" class="block w-full">
+                    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-amber-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-amber-100 p-3 rounded-full">
+                                <i data-lucide="calendar" class="w-6 h-6 text-amber-600"></i>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <h3 class="font-semibold text-gray-800 text-lg">Eventos</h3>
+                                <p class="text-gray-600 text-sm">Confira nossos próximos eventos</p>
+                            </div>
+                            <div class="text-amber-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <button onclick="scrollToSection('tercos')" class="block w-full">
+                    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-amber-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-rose-100 p-3 rounded-full">
+                                <i data-lucide="heart" class="w-6 h-6 text-rose-600"></i>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <h3 class="font-semibold text-gray-800 text-lg">Terços</h3>
+                                <p class="text-gray-600 text-sm">Momentos de oração e reflexão</p>
+                            </div>
+                            <div class="text-amber-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <button onclick="scrollToSection('encontros')" class="block w-full">
+                    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-amber-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <h3 class="font-semibold text-gray-800 text-lg">Encontros</h3>
+                                <p class="text-gray-600 text-sm">Reuniões e atividades do grupo</p>
+                            </div>
+                            <div class="text-amber-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <button onclick="scrollToSection('mural')" class="block w-full">
+                    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-amber-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i data-lucide="camera" class="w-6 h-6 text-purple-600"></i>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <h3 class="font-semibold text-gray-800 text-lg">Mural de Fotos</h3>
+                                <p class="text-gray-600 text-sm">Galeria de momentos especiais</p>
+                            </div>
+                            <div class="text-amber-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-16 bg-white">
+            <div class="px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-amber-800 mb-4">Sobre Nós</h2>
+                    <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-100">
+                        <h3 class="font-bold text-amber-800 text-lg mb-3">Nossa Missão</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Somos um grupo de jovens católicos dedicados a viver e anunciar o Evangelho através da devoção à Nossa
+                            Senhora. Buscamos crescer na fé, fortalecer a comunidade e servir aos mais necessitados.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-6 border border-rose-100">
+                        <h3 class="font-bold text-rose-800 text-lg mb-3">Nossa História</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Fundado em 2025, o grupo Mensageiros de Maria nasceu do desejo de jovens em viver uma espiritualidade
+                            mariana autêntica. Hoje somos uma família unida pela fé e pelo amor à Virgem Maria.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+                        <h3 class="font-bold text-blue-800 text-lg mb-3">Nossos Valores</h3>
+                        <ul class="text-gray-700 text-sm space-y-2">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                                Fé e devoção mariana
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                                Fraternidade e comunhão
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                                Serviço aos necessitados
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                                Formação contínua
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrossel de Últimos Momentos -->
+        <section class="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+            <div class="px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-4">Últimos Momentos</h2>
+                    <div class="w-16 h-1 bg-purple-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="overflow-hidden rounded-2xl shadow-lg">
+                        <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                            <div class="w-full flex-shrink-0 relative">
+                                <div class="relative h-64">
+                                    <img src="/public/encontro1.png" 
+                                         alt="Retiro de Jovens 2024" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                                        <h3 class="font-bold text-lg mb-1">Terço Jovem - Comunidade Filho Amado</h3>
+                                        <p class="text-white/90 text-sm">Junho 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 relative">
+                                <div class="relative h-64">
+                                    <img src="/public/encontro2.png" 
+                                         alt="Ação Social no Lar" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                                        <h3 class="font-bold text-lg mb-1">Terço Jovem - Comunidade Dom Bosco</h3>
+                                        <p class="text-white/90 text-sm">Maio 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 relative">
+                                <div class="relative h-64">
+                                    <img src="/public/encontro4.png" 
+                                         alt="Missa dos Jovens" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                                        <h3 class="font-bold text-lg mb-1">ENCONTRO DE JOVENS</h3>
+                                        <p class="text-white/90 text-sm">Maio 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 relative">
+                                <div class="relative h-64">
+                                    <img src="/public/3.png" 
+                                         alt="Terço em Família" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                                        <h3 class="font-bold text-lg mb-1">ENCONTRO DE JOVENS</h3>
+                                        <p class="text-white/90 text-sm">Maio 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles do Carrossel -->
+                    <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-colors">
+                        <i data-lucide="chevron-left" class="w-5 h-5 text-gray-700"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-colors">
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-gray-700"></i>
+                    </button>
+
+                    <!-- Indicadores -->
+                    <div class="flex justify-center mt-4 space-x-2" id="indicators">
+                        <button onclick="goToSlide(0)" class="w-2 h-2 rounded-full bg-purple-600 indicator active"></button>
+                        <button onclick="goToSlide(1)" class="w-2 h-2 rounded-full bg-purple-300 indicator"></button>
+                        <button onclick="goToSlide(2)" class="w-2 h-2 rounded-full bg-purple-300 indicator"></button>
+                        <button onclick="goToSlide(3)" class="w-2 h-2 rounded-full bg-purple-300 indicator"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Atividades -->
+        <section id="atividades" class="py-16 bg-white">
+            <div class="px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-amber-800 mb-4">Nossas Atividades</h2>
+                    <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Eventos -->
+                <div id="eventos" class="mb-12">
+                    <h3 class="text-xl font-bold text-amber-700 mb-6 flex items-center">
+                        <i data-lucide="calendar" class="w-6 h-6 mr-2"></i>
+                        Próximos Eventos
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-100">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-gray-800">Retiro de Jovens</h4>
+                                <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">15 Fev</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">
+                                Um dia de oração, reflexão e partilha para fortalecer nossa fé.
+                            </p>
+                            <div class="flex items-center text-gray-500 text-xs">
+                                <i data-lucide="clock" class="w-3 h-3 mr-1"></i>
+                                <span class="mr-3">08:00</span>
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-1"></i>
+                                <span>Casa de Retiro São Francisco</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-gray-800">Missa dos Jovens</h4>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">10 Fev</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Celebração especial com participação ativa dos jovens.</p>
+                            <div class="flex items-center text-gray-500 text-xs">
+                                <i data-lucide="clock" class="w-3 h-3 mr-1"></i>
+                                <span class="mr-3">19:00</span>
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-1"></i>
+                                <span>Paróquia São José</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terços -->
+                <div id="tercos" class="mb-12">
+                    <h3 class="text-xl font-bold text-rose-700 mb-6 flex items-center">
+                        <i data-lucide="heart" class="w-6 h-6 mr-2"></i>
+                        Momentos de Oração
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-2xl p-6 border border-rose-100">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-gray-800">Terço Jovem</h4>
+                                <span class="bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full">Terça</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Momento de oração pelas famílias da comunidade.</p>
+                            <div class="flex items-center text-gray-500 text-xs">
+                                <i data-lucide="clock" class="w-3 h-3 mr-1"></i>
+                                <span class="mr-3">19:00</span>
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-1"></i>
+                                <span>Comunidade são Francisco</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Encontros -->
+                <div id="encontros">
+                    <h3 class="text-xl font-bold text-blue-700 mb-6 flex items-center">
+                        <i data-lucide="users" class="w-6 h-6 mr-2"></i>
+                        Encontros de Formação
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-gray-800">Juventude e Fé</h4>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">12 Fev</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Como viver a fé na juventude</p>
+                            <div class="flex items-center text-gray-500 text-xs">
+                                <i data-lucide="clock" class="w-3 h-3 mr-1"></i>
+                                <span class="mr-3">18:00</span>
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-1"></i>
+                                <span>Comunidade Santa Mônica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mural de Fotos -->
+        <section id="mural" class="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+            <div class="px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-4">Mural de Fotos</h2>
+                    <div class="w-16 h-1 bg-purple-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-md">
+                        <img src="/public/mural/1.png" 
+                             alt="Foto 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-md">
+                        <img src="/public/mural/2.png" 
+                             alt="Foto 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-md">
+                        <img src="/public/mural/3.png" 
+                             alt="Foto 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-md">
+                        <img src="/public/mural/4.png" 
+                             alt="Foto 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-md">
+                        <img src="/public/mural/5.png" 
+                             alt="Foto 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-md">
+                        <img src="/public/mural/6.png" 
+                             alt="Foto 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <a href="https://www.instagram.com/gj.mensageirosdemaria/">
+                    <button class="bg-purple-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-purple-700 transition-colors">
+                        Ver Todas as Fotos
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="py-16 bg-white">
+            <div class="px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-amber-800 mb-4">Entre em Contato</h2>
+                    <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- WhatsApp -->
+                    <a href="https://chat.whatsapp.com/H0jYV6a7ToNBl1SXJDjCTS?fbclid=PAZXh0bgNhZW0CMTEAAaeVAE1G_fmoT7kWnk7j2XaslFW4bDM4klJigCiT77p0tEcH8zW1TSQVrlhEfA_aem_bIQQxpXPy_E49wsC8UmfJw" 
+                       target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-white/20 p-3 rounded-full">
+                                    <i data-lucide="message-circle" class="w-8 h-8"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg mb-1">WhatsApp do Grupo</h3>
+                                    <p class="text-green-100 text-sm">Tire suas dúvidas e participe conosco!</p>
+                                </div>
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Localização -->
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-amber-100 p-3 rounded-full">
+                                <i data-lucide="map-pin" class="w-8 h-8 text-amber-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-amber-800 text-lg mb-1">Onde nos encontramos</h3>
+                                <p class="text-amber-700 text-sm">Comunidade Santa Mônica</p>
+                                <p class="text-amber-600 text-sm">Av. Batrum, 301 - 329 - Conj - Novo Reino, Manaus - AM, 69087-641</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horários -->
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i data-lucide="clock" class="w-8 h-8 text-purple-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-purple-800 text-lg mb-1">Horários de Encontro</h3>
+                                <p class="text-purple-700 text-sm">Terça: 19h (Terço)</p>
+                                <p class="text-purple-700 text-sm">Sábados: 18h (Encontro de Jovens)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-amber-800 to-orange-800 text-white py-8">
+            <div class="px-4 text-center">
+                <h3 class="font-bold text-lg mb-2">Mensageiros de Maria</h3>
+                <p class="text-amber-100 text-sm mb-4">Grupo de Jovens Católicos</p>
+                <p class="text-amber-200 text-xs">© 2025 Mensageiros de Maria. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://chat.whatsapp.com/H0jYV6a7ToNBl1SXJDjCTS?fbclid=PAZXh0bgNhZW0CMTEAAaeVAE1G_fmoT7kWnk7j2XaslFW4bDM4klJigCiT77p0tEcH8zW1TSQVrlhEfA_aem_bIQQxpXPy_E49wsC8UmfJw" 
+       target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all z-50 whatsapp-float">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
